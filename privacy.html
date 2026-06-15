@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="privacy.page.title">Privacy Policy — MoodFlow</title>
+    <meta name="description" content="MoodFlow privacy policy. How we handle your data, your rights, and our commitment to privacy.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Animated background -->
+    <div class="bg-gradient">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+    <div class="noise"></div>
+
+    <!-- Navigation -->
+    <nav class="nav scrolled" id="nav">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-mark">
+                    <svg viewBox="0 0 32 32" fill="none">
+                        <path d="M16 4C9.373 4 4 9.373 4 16C4 22.627 9.373 28 16 28C22.627 28 28 22.627 28 16C28 9.373 22.627 4 16 4Z" fill="url(#logo-grad)"/>
+                        <path d="M11 12C11 11.448 11.448 11 12 11C12.552 11 13 11.448 13 12C13 12.552 12.552 13 12 13C11.448 13 11 12.552 11 12Z" fill="white"/>
+                        <path d="M19 12C19 11.448 19.448 11 20 11C20.552 11 21 11.448 21 12C21 12.552 20.552 13 20 13C19.448 13 19 12.552 19 12Z" fill="white"/>
+                        <path d="M11 17C11 18.5 13 21 16 21C19 21 21 18.5 21 17" stroke="white" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+                        <defs>
+                            <linearGradient id="logo-grad" x1="4" y1="4" x2="28" y2="28">
+                                <stop stop-color="#a78bfa"/>
+                                <stop offset="1" stop-color="#7c3aed"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <span class="logo-text" data-i18n="brand">MoodFlow</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html#features" class="nav-link" data-i18n="nav.features">Features</a></li>
+                <li><a href="index.html#premium" class="nav-link" data-i18n="nav.premium">Premium</a></li>
+                <li><a href="index.html" class="nav-link" data-i18n="nav.privacy">Home</a></li>
+                <li><a href="index.html#download" class="nav-cta" data-i18n="nav.download">Get App</a></li>
+                <li>
+                    <button class="lang-toggle" id="langToggle" aria-label="Toggle language" type="button">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M2 12h20"/>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                        </svg>
+                        <span class="lang-label">EN</span>
+                    </button>
+                </li>
+            </ul>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <span class="eyebrow" data-i18n="nav.privacy">Privacy</span>
+            <h1 class="page-title" data-i18n="privacy.page.title">Privacy Policy</h1>
+            <p class="page-lead" data-i18n="privacy.page.lead">At MoodFlow, we believe emotional data is deeply personal. This policy explains exactly what we collect and why.</p>
+        </div>
+    </section>
+
+    <!-- Privacy Content -->
+    <section class="legal-page">
+        <div class="container">
+            <div class="legal-card">
+                <div class="legal-section">
+                    <h2 data-i18n="privacy.page.collect.title">Data we collect</h2>
+                    <ul>
+                        <li data-i18n="privacy.page.collect.item.1">Only the mood entries, notes, and preferences you voluntarily provide.</li>
+                        <li data-i18n="privacy.page.collect.item.2">Where it's stored: Locally on your device. Cloud sync is opt-in and end-to-end encrypted.</li>
+                        <li data-i18n="privacy.page.collect.item.3">Third parties: We never sell, share, or trade your personal data. Ever.</li>
+                        <li data-i18n="privacy.page.collect.item.4">Analytics: We collect anonymous, aggregated usage stats to improve the app. No personal content is included.</li>
+                        <li data-i18n="privacy.page.collect.item.5">Your rights: Access, modify, export, or delete your data at any time from Settings.</li>
+                    </ul>
+                </div>
+
+                <div class="legal-section" id="kvkk">
+                    <h2 data-i18n="privacy.page.kvkk.title">KVKK Aydınlatma Metni (Turkey)</h2>
+                    <p class="legal-lead" data-i18n="privacy.page.kvkk.lead">Under the Personal Data Protection Law No. 6698:</p>
+                    <ul>
+                        <li data-i18n="privacy.page.kvkk.item.1">Your personal data is processed only with your explicit consent.</li>
+                        <li data-i18n="privacy.page.kvkk.item.2">You have the right to learn whether your data is being processed.</li>
+                        <li data-i18n="privacy.page.kvkk.item.3">You may request correction, deletion, or anonymization of your data.</li>
+                        <li data-i18n="privacy.page.kvkk.item.4">Data is processed only for specific, legitimate purposes.</li>
+                        <li data-i18n="privacy.page.kvkk.item.5">Appropriate security measures are in place to prevent unauthorized access.</li>
+                    </ul>
+                </div>
+
+                <div class="legal-section legal-contact">
+                    <p>
+                        <span data-i18n="privacy.page.contact.lead">Questions? Email our Data Protection Officer at</span>
+                        <a href="mailto:privacy@moodflow.app">privacy@moodflow.app</a>
+                    </p>
+                </div>
+
+                <div class="legal-footer">
+                    <p><span data-i18n="privacy.page.updated">Last updated</span>: January 2026</p>
+                </div>
+            </div>
+
+            <div class="legal-nav-row">
+                <a href="index.html" class="btn btn-ghost">
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M13 8H3M3 8L8 3M3 8L8 13"/>
+                    </svg>
+                    <span data-i18n="back.home">Back to Home</span>
+                </a>
+                <a href="terms.html" class="btn btn-ghost" data-i18n="terms.page.title">Terms of Use</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-mark">
+                            <svg viewBox="0 0 32 32" fill="none">
+                                <path d="M16 4C9.373 4 4 9.373 4 16C4 22.627 9.373 28 16 28C22.627 28 28 22.627 28 16C28 9.373 22.627 4 16 4Z" fill="url(#logo-grad-2)"/>
+                                <path d="M11 12C11 11.448 11.448 11 12 11C12.552 11 13 11.448 13 12C13 12.552 12.552 13 12 13C11.448 13 11 12.552 11 12Z" fill="white"/>
+                                <path d="M19 12C19 11.448 19.448 11 20 11C20.552 11 21 11.448 21 12C21 12.552 20.552 13 20 13C19.448 13 19 12.552 19 12Z" fill="white"/>
+                                <path d="M11 17C11 18.5 13 21 16 21C19 21 21 18.5 21 17" stroke="white" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+                                <defs>
+                                    <linearGradient id="logo-grad-2" x1="4" y1="4" x2="28" y2="28">
+                                        <stop stop-color="#a78bfa"/>
+                                        <stop offset="1" stop-color="#7c3aed"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                        <span class="logo-text" data-i18n="brand">MoodFlow</span>
+                    </a>
+                    <p data-i18n="footer.tagline">Your emotional wellness companion. Privacy-first, beautifully designed.</p>
+                </div>
+                <div class="footer-col">
+                    <h5 data-i18n="footer.col.product">Product</h5>
+                    <ul>
+                        <li><a href="index.html#features" data-i18n="footer.link.features">Features</a></li>
+                        <li><a href="index.html#premium" data-i18n="footer.link.premium">Premium</a></li>
+                        <li><a href="index.html#showcase" data-i18n="footer.link.showcase">Showcase</a></li>
+                        <li><a href="index.html#download" data-i18n="footer.link.download">Download</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5 data-i18n="footer.col.legal">Legal</h5>
+                    <ul>
+                        <li><a href="privacy.html" data-i18n="footer.link.privacy">Privacy Policy</a></li>
+                        <li><a href="terms.html" data-i18n="footer.link.terms">Terms of Use</a></li>
+                        <li><a href="privacy.html#kvkk" data-i18n="footer.link.kvkk">KVKK</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5 data-i18n="footer.col.contact">Contact</h5>
+                    <ul>
+                        <li><a href="mailto:hello@moodflow.app" data-i18n="footer.link.hello">General inquiries</a></li>
+                        <li><a href="mailto:privacy@moodflow.app" data-i18n="footer.link.privacy.email">Data Protection Officer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer.copyright">© 2026 MoodFlow. Made with care for emotional wellbeing.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="i18n.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

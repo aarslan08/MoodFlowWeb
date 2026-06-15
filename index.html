@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="meta.title">MoodFlow — Your Emotional Wellness Companion</title>
+    <meta name="description" data-i18n-attr="meta.description:content" content="Track your daily mood, discover emotional patterns, and build a healthier mental state with MoodFlow.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Animated background -->
+    <div class="bg-gradient">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+    <div class="noise"></div>
+
+    <!-- Navigation -->
+    <nav class="nav" id="nav">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <div class="logo-mark">
+                    <svg viewBox="0 0 32 32" fill="none">
+                        <path d="M16 4C9.373 4 4 9.373 4 16C4 22.627 9.373 28 16 28C22.627 28 28 22.627 28 16C28 9.373 22.627 4 16 4Z" fill="url(#logo-grad)"/>
+                        <path d="M11 12C11 11.448 11.448 11 12 11C12.552 11 13 11.448 13 12C13 12.552 12.552 13 12 13C11.448 13 11 12.552 11 12Z" fill="white"/>
+                        <path d="M19 12C19 11.448 19.448 11 20 11C20.552 11 21 11.448 21 12C21 12.552 20.552 13 20 13C19.448 13 19 12.552 19 12Z" fill="white"/>
+                        <path d="M11 17C11 18.5 13 21 16 21C19 21 21 18.5 21 17" stroke="white" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+                        <defs>
+                            <linearGradient id="logo-grad" x1="4" y1="4" x2="28" y2="28">
+                                <stop stop-color="#a78bfa"/>
+                                <stop offset="1" stop-color="#7c3aed"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <span class="logo-text" data-i18n="brand">MoodFlow</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#features" class="nav-link" data-i18n="nav.features">Features</a></li>
+                <li><a href="#premium" class="nav-link" data-i18n="nav.premium">Premium</a></li>
+                <li><a href="#privacy" class="nav-link" data-i18n="nav.privacy">Privacy</a></li>
+                <li><a href="#download" class="nav-cta" data-i18n="nav.download">Get App</a></li>
+                <li>
+                    <button class="lang-toggle" id="langToggle" aria-label="Toggle language" type="button">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M2 12h20"/>
+                            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                        </svg>
+                        <span class="lang-label">EN</span>
+                    </button>
+                </li>
+            </ul>
+            <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    <span data-i18n="hero.badge">Now with weekly insights</span>
+                </div>
+                <h1 class="hero-title">
+                    <span data-i18n="hero.title.1">Your emotions,</span>
+                    <span class="gradient-text" data-i18n="hero.title.2">beautifully</span>
+                    <br><span data-i18n="hero.title.3">understood.</span>
+                </h1>
+                <p class="hero-desc" data-i18n="hero.desc">MoodFlow is the privacy-first mood tracker that helps you recognize patterns, build healthy habits, and nurture your emotional wellbeing.</p>
+                <div class="hero-cta">
+                    <a href="#download" class="btn btn-primary">
+                        <span data-i18n="hero.cta.primary">Download Free</span>
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M3 8H13M13 8L8 3M13 8L8 13" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="#showcase" class="btn btn-ghost">
+                        <svg width="14" height="14" viewBox="0 0 14 14" fill="currentColor">
+                            <path d="M7 1L9.39 4.74L13.5 5.53L10.5 8.81L11.18 13L7 11.27L2.82 13L3.5 8.81L0.5 5.53L4.61 4.74L7 1Z"/>
+                        </svg>
+                        <span data-i18n="hero.cta.secondary">See how it works</span>
+                    </a>
+                </div>
+                <div class="hero-meta">
+                    <div class="meta-item">
+                        <span class="meta-num">4.8<span class="meta-star">★</span></span>
+                        <span class="meta-label" data-i18n="hero.meta.rating">App Store</span>
+                    </div>
+                    <div class="meta-divider"></div>
+                    <div class="meta-item">
+                        <span class="meta-num">50K+</span>
+                        <span class="meta-label" data-i18n="hero.meta.users">Happy users</span>
+                    </div>
+                    <div class="meta-divider"></div>
+                    <div class="meta-item">
+                        <span class="meta-num">2M+</span>
+                        <span class="meta-label" data-i18n="hero.meta.moods">Moods tracked</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="phone-frame">
+                    <div class="phone-notch"></div>
+                    <div class="phone-screen">
+                        <div class="screen-status">
+                            <span>9:41</span>
+                            <div class="status-icons">
+                                <span>•••</span>
+                                <span>📶</span>
+                                <span>🔋</span>
+                            </div>
+                        </div>
+                        <div class="screen-app">
+                            <div class="screen-header-bar">
+                                <div class="screen-date">Thursday, June 4</div>
+                                <div class="screen-greeting">How are you feeling?</div>
+                            </div>
+                            <div class="screen-mood-card">
+                                <div class="mood-face">
+                                    <div class="mood-eyes">
+                                        <span></span>
+                                        <span></span>
+                                    </div>
+                                    <div class="mood-mouth"></div>
+                                </div>
+                                <div class="mood-info">
+                                    <div class="mood-label-small">Feeling</div>
+                                    <div class="mood-name">Happy</div>
+                                </div>
+                            </div>
+                            <div class="screen-chips">
+                                <div class="chip active">Work</div>
+                                <div class="chip">Family</div>
+                                <div class="chip">Health</div>
+                                <div class="chip">Sleep</div>
+                            </div>
+                            <div class="screen-stats">
+                                <div class="stat-pill">
+                                    <div class="stat-pill-label">7 day streak</div>
+                                    <div class="stat-pill-num">🔥 7</div>
+                                </div>
+                                <div class="stat-pill">
+                                    <div class="stat-pill-label">This week</div>
+                                    <div class="stat-pill-num">😊</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="phone-glow"></div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Logos / Trust -->
+    <section class="trust">
+        <div class="container">
+            <p class="trust-text" data-i18n="trust.text">Trusted by mindful people worldwide</p>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="eyebrow" data-i18n="features.eyebrow">What you'll love</span>
+                <h2 class="section-title" data-i18n="features.title">Built for the way you <em>actually</em> feel</h2>
+                <p class="section-desc" data-i18n="features.desc">Six thoughtful features designed to make emotional tracking feel natural, not clinical.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card large">
+                    <div class="feature-visual">
+                        <div class="mood-grid">
+                            <div class="mood-cell happy">😊</div>
+                            <div class="mood-cell neutral">😐</div>
+                            <div class="mood-cell sad">😢</div>
+                            <div class="mood-cell tired">😴</div>
+                            <div class="mood-cell angry">😠</div>
+                            <div class="mood-cell stressed">😰</div>
+                        </div>
+                    </div>
+                    <div class="feature-text">
+                        <span class="feature-tag" data-i18n="feature.1.tag">01</span>
+                        <h3 data-i18n="feature.1.title">One-tap mood logging</h3>
+                        <p data-i18n="feature.1.desc">Pick how you feel, add intensity, and you're done. No lengthy questionnaires, no friction.</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-text">
+                        <span class="feature-tag" data-i18n="feature.2.tag">02</span>
+                        <h3 data-i18n="feature.2.title">Smart insights</h3>
+                        <p data-i18n="feature.2.desc">Discover patterns in your week, month, and year.</p>
+                    </div>
+                    <div class="feature-mini-visual">
+                        <div class="mini-chart">
+                            <div class="bar" style="--h: 40%"></div>
+                            <div class="bar" style="--h: 60%"></div>
+                            <div class="bar" style="--h: 80%"></div>
+                            <div class="bar" style="--h: 55%"></div>
+                            <div class="bar" style="--h: 90%"></div>
+                            <div class="bar" style="--h: 70%"></div>
+                            <div class="bar" style="--h: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-text">
+                        <span class="feature-tag" data-i18n="feature.3.tag">03</span>
+                        <h3 data-i18n="feature.3.title">Gentle reminders</h3>
+                        <p data-i18n="feature.3.desc">Customizable nudges that respect your day.</p>
+                    </div>
+                    <div class="feature-mini-visual">
+                        <div class="mini-bell">
+                            <div class="bell-icon">🔔</div>
+                            <div class="bell-time">20:00</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-text">
+                        <span class="feature-tag" data-i18n="feature.4.tag">04</span>
+                        <h3 data-i18n="feature.4.title">Privacy by design</h3>
+                        <p data-i18n="feature.4.desc">Your data stays on your device. Period.</p>
+                    </div>
+                    <div class="feature-mini-visual">
+                        <div class="mini-shield">
+                            <div class="shield-icon">🛡️</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-card large">
+                    <div class="feature-text">
+                        <span class="feature-tag" data-i18n="feature.5.tag">05</span>
+                        <h3 data-i18n="feature.5.title">Beautiful statistics</h3>
+                        <p data-i18n="feature.5.desc">Detailed charts, streaks, and habit correlations that actually make sense at a glance.</p>
+                    </div>
+                    <div class="feature-visual">
+                        <div class="stats-mock">
+                            <div class="stats-bar">
+                                <div class="stats-fill" style="--w: 78%"></div>
+                            </div>
+                            <div class="stats-info">
+                                <div>
+                                    <div class="stats-label">Weekly average</div>
+                                    <div class="stats-num">4.2</div>
+                                </div>
+                                <div class="trend-up">↑ 12%</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-text">
+                        <span class="feature-tag" data-i18n="feature.6.tag">06</span>
+                        <h3 data-i18n="feature.6.title">Achievements</h3>
+                        <p data-i18n="feature.6.desc">Unlock milestones as you build the habit.</p>
+                    </div>
+                    <div class="feature-mini-visual">
+                        <div class="mini-badges">
+                            <div class="badge-item">🏆</div>
+                            <div class="badge-item">🔥</div>
+                            <div class="badge-item">⭐</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Showcase Section -->
+    <section class="showcase" id="showcase">
+        <div class="container">
+            <div class="section-header">
+                <span class="eyebrow" data-i18n="showcase.eyebrow">Designed to delight</span>
+                <h2 class="section-title" data-i18n="showcase.title">A look you'll <em>actually</em> enjoy</h2>
+                <p class="section-desc" data-i18n="showcase.desc">Every pixel crafted to feel calm, focused, and genuinely yours.</p>
+            </div>
+            <div class="showcase-grid">
+                <div class="showcase-item">
+                    <div class="phone-frame small">
+                        <div class="phone-notch"></div>
+                        <div class="phone-screen gradient-1">
+                            <div class="screen-mock-content">
+                                <div class="mock-mood-bubble"></div>
+                                <div class="mock-mood-bubble small"></div>
+                                <div class="mock-mood-bubble"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <h4 data-i18n="showcase.1.title">Capture every feeling</h4>
+                    <p data-i18n="showcase.1.desc">Six moods, infinite nuance.</p>
+                </div>
+                <div class="showcase-item">
+                    <div class="phone-frame small">
+                        <div class="phone-notch"></div>
+                        <div class="phone-screen gradient-2">
+                            <div class="screen-mock-content">
+                                <div class="mock-bar-chart">
+                                    <div class="mock-bar" style="--h: 50%"></div>
+                                    <div class="mock-bar" style="--h: 70%"></div>
+                                    <div class="mock-bar" style="--h: 60%"></div>
+                                    <div class="mock-bar" style="--h: 90%"></div>
+                                    <div class="mock-bar" style="--h: 75%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h4 data-i18n="showcase.2.title">Beautiful insights</h4>
+                    <p data-i18n="showcase.2.desc">Patterns revealed, beautifully.</p>
+                </div>
+                <div class="showcase-item">
+                    <div class="phone-frame small">
+                        <div class="phone-notch"></div>
+                        <div class="phone-screen gradient-3">
+                            <div class="screen-mock-content">
+                                <div class="mock-calendar">
+                                    <div class="cal-day"></div>
+                                    <div class="cal-day active"></div>
+                                    <div class="cal-day"></div>
+                                    <div class="cal-day"></div>
+                                    <div class="cal-day"></div>
+                                    <div class="cal-day"></div>
+                                    <div class="cal-day"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h4 data-i18n="showcase.3.title">Streak tracking</h4>
+                    <p data-i18n="showcase.3.desc">Build the habit, day by day.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Section -->
+    <section class="premium" id="premium">
+        <div class="container">
+            <div class="premium-card">
+                <div class="premium-glow"></div>
+                <div class="premium-content">
+                    <div class="premium-header">
+                        <span class="eyebrow premium-eyebrow" data-i18n="premium.eyebrow">MoodFlow Premium</span>
+                        <h2 class="premium-title" data-i18n="premium.title">Unlock your <em>full</em> potential</h2>
+                        <p class="premium-desc" data-i18n="premium.desc">Take your emotional wellness journey further with powerful insights, unlimited storage, and a completely ad-free experience.</p>
+                    </div>
+                    <div class="premium-grid">
+                        <div class="premium-feature">
+                            <span class="premium-check">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                            </span>
+                            <span data-i18n="premium.feature.1">Ad-free experience</span>
+                        </div>
+                        <div class="premium-feature">
+                            <span class="premium-check">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                            </span>
+                            <span data-i18n="premium.feature.2">AI-powered insights</span>
+                        </div>
+                        <div class="premium-feature">
+                            <span class="premium-check">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                            </span>
+                            <span data-i18n="premium.feature.3">Unlimited photo attachments</span>
+                        </div>
+                        <div class="premium-feature">
+                            <span class="premium-check">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                            </span>
+                            <span data-i18n="premium.feature.4">Voice notes</span>
+                        </div>
+                        <div class="premium-feature">
+                            <span class="premium-check">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                            </span>
+                            <span data-i18n="premium.feature.5">Face ID & PIN lock</span>
+                        </div>
+                        <div class="premium-feature">
+                            <span class="premium-check">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                            </span>
+                            <span data-i18n="premium.feature.6">Home Screen widget</span>
+                        </div>
+                        <div class="premium-feature">
+                            <span class="premium-check">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                            </span>
+                            <span data-i18n="premium.feature.7">Yearly heatmap & trends</span>
+                        </div>
+                        <div class="premium-feature">
+                            <span class="premium-check">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                            </span>
+                            <span data-i18n="premium.feature.8">Export to CSV & JSON</span>
+                        </div>
+                        <div class="premium-feature">
+                            <span class="premium-check">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                            </span>
+                            <span data-i18n="premium.feature.9">Backdate entries</span>
+                        </div>
+                        <div class="premium-feature">
+                            <span class="premium-check">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                            </span>
+                            <span data-i18n="premium.feature.10">Premium support</span>
+                        </div>
+                    </div>
+                    <div class="premium-cta-row">
+                        <a href="#download" class="btn btn-primary btn-large" data-i18n="premium.cta.subscribe">Subscribe in App</a>
+                        <p class="premium-note" data-i18n="premium.cta.note">Available in the App Store. Cancel anytime.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Privacy Section -->
+    <section class="privacy" id="privacy">
+        <div class="container">
+            <div class="privacy-wrapper">
+                <div class="privacy-intro">
+                    <span class="eyebrow" data-i18n="privacy.eyebrow">Privacy & compliance</span>
+                    <h2 class="section-title" data-i18n="privacy.title">Your data, your <em>control</em></h2>
+                    <p class="section-desc" data-i18n="privacy.desc">Built on a foundation of privacy. We're compliant with KVKK, GDPR, and Apple/Google privacy guidelines.</p>
+                </div>
+                <div class="privacy-grid">
+                    <div class="privacy-card">
+                        <div class="privacy-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <rect x="5" y="11" width="14" height="10" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M8 11V7C8 4.79 9.79 3 12 3C14.21 3 16 4.79 16 7V11" stroke="currentColor" stroke-width="1.5"/>
+                                <circle cx="12" cy="16" r="1.5" fill="currentColor"/>
+                            </svg>
+                        </div>
+                        <h3 data-i18n="privacy.card.1.title">Local-first storage</h3>
+                        <p data-i18n="privacy.card.1.desc">All data lives on your device by default. We can't read your entries — even if we wanted to.</p>
+                    </div>
+                    <div class="privacy-card">
+                        <div class="privacy-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5"/>
+                                <path d="M12 7V12L15 14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3 data-i18n="privacy.card.2.title">You control retention</h3>
+                        <p data-i18n="privacy.card.2.desc">Delete your data in a single tap. No backups, no archives, no exceptions.</p>
+                    </div>
+                    <div class="privacy-card">
+                        <div class="privacy-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                <path d="M12 2L14 8H20L15 12L17 18L12 14L7 18L9 12L4 8H10L12 2Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 data-i18n="privacy.card.3.title">Full KVKK & GDPR</h3>
+                        <p data-i18n="privacy.card.3.desc">Compliant with Turkish Personal Data Protection Law (KVKK) and EU GDPR regulations.</p>
+                    </div>
+                </div>
+                <div class="privacy-cta-row">
+                    <a href="privacy.html" class="btn btn-ghost" data-i18n="privacy.read.policy">Read full Privacy Policy</a>
+                    <a href="terms.html" class="btn btn-ghost" data-i18n="privacy.read.terms">Read Terms of Use</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download CTA -->
+    <section class="download" id="download">
+        <div class="container">
+            <div class="download-card">
+                <div class="download-glow"></div>
+                <div class="download-content">
+                    <span class="eyebrow light" data-i18n="download.eyebrow">Get started today</span>
+                    <h2 data-i18n="download.title">Your emotional journey<br>starts with one tap.</h2>
+                    <p data-i18n="download.desc">Join 50,000+ people building a healthier relationship with their emotions.</p>
+                    <div class="download-buttons">
+                        <a href="#" class="store-btn">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                                <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.29-1.31 2.41-2.53 3.08zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/>
+                            </svg>
+                            <div>
+                                <small data-i18n="download.ios.small">Download on the</small>
+                                <strong data-i18n="download.ios.strong">App Store</strong>
+                            </div>
+                        </a>
+                        <a href="#" class="store-btn">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="24" height="24">
+                                <path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.807 1.626a1 1 0 0 1 0 1.73l-2.808 1.626L15.206 12l2.492-2.492zM5.864 2.658L16.802 8.99l-2.302 2.302-8.636-8.634z"/>
+                            </svg>
+                            <div>
+                                <small data-i18n="download.android.small">Get it on</small>
+                                <strong data-i18n="download.android.strong">Google Play</strong>
+                            </div>
+                        </a>
+                    </div>
+                    <p class="download-note" data-i18n="download.cancel">Cancel anytime from App Store settings.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <div class="logo-mark">
+                            <svg viewBox="0 0 32 32" fill="none">
+                                <path d="M16 4C9.373 4 4 9.373 4 16C4 22.627 9.373 28 16 28C22.627 28 28 22.627 28 16C28 9.373 22.627 4 16 4Z" fill="url(#logo-grad-2)"/>
+                                <path d="M11 12C11 11.448 11.448 11 12 11C12.552 11 13 11.448 13 12C13 12.552 12.552 13 12 13C11.448 13 11 12.552 11 12Z" fill="white"/>
+                                <path d="M19 12C19 11.448 19.448 11 20 11C20.552 11 21 11.448 21 12C21 12.552 20.552 13 20 13C19.448 13 19 12.552 19 12Z" fill="white"/>
+                                <path d="M11 17C11 18.5 13 21 16 21C19 21 21 18.5 21 17" stroke="white" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+                                <defs>
+                                    <linearGradient id="logo-grad-2" x1="4" y1="4" x2="28" y2="28">
+                                        <stop stop-color="#a78bfa"/>
+                                        <stop offset="1" stop-color="#7c3aed"/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                        </div>
+                        <span class="logo-text" data-i18n="brand">MoodFlow</span>
+                    </a>
+                    <p data-i18n="footer.tagline">Your emotional wellness companion. Privacy-first, beautifully designed.</p>
+                </div>
+                <div class="footer-col">
+                    <h5 data-i18n="footer.col.product">Product</h5>
+                    <ul>
+                        <li><a href="#features" data-i18n="footer.link.features">Features</a></li>
+                        <li><a href="#premium" data-i18n="footer.link.premium">Premium</a></li>
+                        <li><a href="#showcase" data-i18n="footer.link.showcase">Showcase</a></li>
+                        <li><a href="#download" data-i18n="footer.link.download">Download</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5 data-i18n="footer.col.legal">Legal</h5>
+                    <ul>
+                        <li><a href="privacy.html" data-i18n="footer.link.privacy">Privacy Policy</a></li>
+                        <li><a href="terms.html" data-i18n="footer.link.terms">Terms of Use</a></li>
+                        <li><a href="privacy.html#kvkk" data-i18n="footer.link.kvkk">KVKK</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5 data-i18n="footer.col.contact">Contact</h5>
+                    <ul>
+                        <li><a href="mailto:hello@moodflow.app" data-i18n="footer.link.hello">General inquiries</a></li>
+                        <li><a href="mailto:privacy@moodflow.app" data-i18n="footer.link.privacy.email">Data Protection Officer</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer.copyright">© 2026 MoodFlow. Made with care for emotional wellbeing.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="i18n.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
